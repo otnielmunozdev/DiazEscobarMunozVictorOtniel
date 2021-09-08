@@ -1,0 +1,64 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  .divTitle{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 27%;
+    transform: translateY(-50%);
+    font-size: 44px;
+    font-family: monospace;
+    color: #FFF;
+    font-weight: 700;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  .ionContainer{
+    background: var(--ion-background-color, #090d31);
+  }
+  
+  ion-input{
+    width: 60%;
+    // border: 1px solid black;
+    border-radius: 11px;
+    margin-left: 20%;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    color: rgb(0 0 0);
+      background-color: rgb(255 255 255);
+  }
+  
+  .loginButton{
+    margin-bottom: 18px;
+  }
+  
+  .principalDiv{
+    height: 100vh;
+    background-image: radial-gradient(circle at 49.22% 48.34%, #5d6366 0, #415460 25%, #1f4459 50%, #003553 75%, #00264d 100%);
+  }

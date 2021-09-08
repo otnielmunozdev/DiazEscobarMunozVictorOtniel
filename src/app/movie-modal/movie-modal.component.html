@@ -1,0 +1,37 @@
+<ion-content class="ionContainer">
+  <div class="principalDiv">
+    <div class="back">
+      <a (click)="back()">Regresar</a>
+    </div>
+    <div class="divTitle">
+      {{movie.name}}
+    </div>
+    <div class="container">
+      <img
+        [src]="movie.image?movie.image.original:'https://www.entrepreneurialteachers.eu/wp-content/themes/superfine/assets/images/blog/no-img.jpg'">
+    </div>
+    <div style="
+    overflow: scroll;
+    height: 30vh;
+">
+      <div [innerHTML]="'Descripción: ' + movie.summary" class="summaryMovie"></div>
+      <div>
+        <span class="summaryMovie"> Género:</span>
+        <span *ngFor="let genre of movie.genres  let i=index" class="summaryMovie"> {{genre?genre:'Desconocido'}}
+        </span>
+      </div>
+      <br>
+      <div>
+        <span class="summaryMovie"> Lenguaje: {{movie.language}}</span>
+      </div>
+      <br>
+      <div>
+        <span class="summaryMovie"> Horario de transmisión:</span>
+        <span *ngFor="let days of movie.schedule.days  let i=index" class="summaryMovie"> {{days}} </span>
+        <span class="summaryMovie">{{ movie.schedule.time}}</span>
+      </div>
+    </div>
+
+
+  </div>
+</ion-content>

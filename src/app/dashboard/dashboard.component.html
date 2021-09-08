@@ -1,0 +1,23 @@
+
+<ion-content class="ionContainer">
+  <div class="principalDiv">
+    <div class="back">
+      <a (click)="logout()">Salir</a>
+    </div>
+    <div class="divTitle">
+      Bienvenido
+    </div>
+    <div class="container">
+      <ion-input type="text" placeholder="Buscar género de película"
+      (keyup)="search($event.target.value)"> </ion-input>
+    </div>
+    <div class="containerMovies">
+      <div *ngFor="let movie of arrayMovies" class="containerMovie" (click)="openModalInfoMovie(movie.show)">
+        <img [src]="movie.show.image?movie.show.image.original:'https://www.entrepreneurialteachers.eu/wp-content/themes/superfine/assets/images/blog/no-img.jpg'">
+        <div [innerHTML]="movie.show.name + movie.show.summary" class="summaryMovie"></div>
+
+      </div>
+    </div>
+   
+  </div>
+</ion-content>
